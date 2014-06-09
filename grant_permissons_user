@@ -1,0 +1,54 @@
+env)sthorat@sthorat-ThinkCentre-M55e:/opt/dxrptw/testFramework/warehouse/util/python/common$ sudo su - postgres
+postgres@sthorat-ThinkCentre-M55e:~$ psql dxi
+psql (9.3.2)
+Type "help" for help.
+
+dxi=# \l
+                             List of databases
+   Name    |  Owner   | Encoding | Collate | Ctype |   Access privileges    
+-----------+----------+----------+---------+-------+------------------------
+ dxi       | postgres | UTF8     | en_IN   | en_IN | 
+ gtrdotmcs | postgres | UTF8     | en_IN   | en_IN | =Tc/postgres          +
+           |          |          |         |       | postgres=CTc/postgres +
+           |          |          |         |       | ghanshyam=CTc/postgres
+ postgres  | postgres | UTF8     | en_IN   | en_IN | 
+ template0 | postgres | UTF8     | en_IN   | en_IN | =c/postgres           +
+           |          |          |         |       | postgres=CTc/postgres
+ template1 | postgres | UTF8     | en_IN   | en_IN | =c/postgres           +
+           |          |          |         |       | postgres=CTc/postgres
+(5 rows)
+
+dxi=# CREATE USER sthorat WITH PASSWORD 'Talent_123';
+CREATE ROLE
+dxi=# GRANT ALL PRIVILEGES ON DATABASE "dxi" to sthorat;
+GRANT
+dxi=# \q
+postgres@sthorat-ThinkCentre-M55e:~$ psql dxi
+psql (9.3.2)
+Type "help" for help.
+
+dxi=# \l
+                             List of databases
+   Name    |  Owner   | Encoding | Collate | Ctype |   Access privileges    
+-----------+----------+----------+---------+-------+------------------------
+ dxi       | postgres | UTF8     | en_IN   | en_IN | =Tc/postgres          +
+           |          |          |         |       | postgres=CTc/postgres +
+           |          |          |         |       | sthorat=CTc/postgres
+ gtrdotmcs | postgres | UTF8     | en_IN   | en_IN | =Tc/postgres          +
+           |          |          |         |       | postgres=CTc/postgres +
+           |          |          |         |       | ghanshyam=CTc/postgres
+ postgres  | postgres | UTF8     | en_IN   | en_IN | 
+ template0 | postgres | UTF8     | en_IN   | en_IN | =c/postgres           +
+           |          |          |         |       | postgres=CTc/postgres
+ template1 | postgres | UTF8     | en_IN   | en_IN | =c/postgres           +
+           |          |          |         |       | postgres=CTc/postgres
+(5 rows)
+
+dxi=# 
+dxi=# 
+dxi=# \q
+postgres@sthorat-ThinkCentre-M55e:~$ exit
+logout
+(pyenv)sthorat@sthorat-ThinkCentre-M55e:/opt/dxrptw/testFramework/warehouse/util/python/common$ psql dxi
+psql (9.3.2)
+Type "help" for help.
